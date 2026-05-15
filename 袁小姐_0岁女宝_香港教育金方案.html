@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>袁小姐 | 0歲女寶教育金储蓄方案 | Raven999HK</title>
+<style>
+  :root {
+    --navy: #1a2744;
+    --coral: #e85d4e;
+    --coral-light: #fdf2f1;
+    --gold: #c5a059;
+    --text: #333;
+    --text-light: #666;
+    --bg: #ffffff;
+    --bg-alt: #f7f9fc;
+    --border: #e2e8f0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 48px 0; border-bottom: 1px solid var(--border); }
+  section:last-child { border-bottom: none; }
+  h1, h2, h3 { color: var(--navy); font-weight: 700; }
+  h1 { font-size: 28px; }
+  h2 { font-size: 22px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+  h2 .num { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: var(--navy); color: #fff; border-radius: 50%; font-size: 14px; }
+  h3 { font-size: 17px; margin: 20px 0 10px; }
+  p { margin-bottom: 12px; }
+  .subtitle { color: var(--text-light); font-size: 15px; margin-bottom: 24px; }
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, #2c3e65 100%);
+    color: #fff;
+    padding: 60px 0 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: "Raven999HK";
+    position: absolute;
+    bottom: 10px; right: 16px;
+    font-size: 13px; opacity: 0.25; letter-spacing: 1px;
+    color: #fff;
+  }
+  .hero h1 { color: #fff; font-size: 26px; margin-bottom: 10px; }
+  .hero .tagline { opacity: 0.9; font-size: 15px; margin-bottom: 24px; }
+  .hero .meta {
+    display: inline-flex; gap: 24px; flex-wrap: wrap; justify-content: center;
+    background: rgba(255,255,255,0.1);
+    padding: 14px 28px; border-radius: 8px;
+    font-size: 14px;
+  }
+  .hero .meta span { display: inline-flex; align-items: center; gap: 6px; }
+  .dot { width: 6px; height: 6px; background: var(--coral); border-radius: 50%; display: inline-block; }
+
+  .highlight-box {
+    background: var(--coral-light);
+    border-left: 4px solid var(--coral);
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+    margin: 20px 0;
+  }
+
+  table {
+    width: 100%; border-collapse: collapse; font-size: 14px; margin: 16px 0;
+    background: #fff; border-radius: 8px; overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  thead { background: var(--navy); color: #fff; }
+  th, td { padding: 12px 10px; text-align: center; border-bottom: 1px solid var(--border); }
+  th { font-weight: 600; font-size: 13px; white-space: nowrap; }
+  tbody tr:hover { background: var(--bg-alt); }
+  td:first-child, th:first-child { text-align: left; padding-left: 16px; font-weight: 600; }
+  .badge {
+    display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 600;
+  }
+  .badge-gold { background: #fff8e6; color: #a67c00; }
+  .badge-coral { background: var(--coral-light); color: var(--coral); }
+  .badge-navy { background: #eef1f7; color: var(--navy); }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .card {
+    background: #fff; border: 1px solid var(--border); border-radius: 10px;
+    padding: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  }
+  .card h4 { font-size: 15px; color: var(--navy); margin-bottom: 8px; }
+  .card p { font-size: 13.5px; color: var(--text-light); margin-bottom: 0; }
+  .card .score { font-size: 24px; font-weight: 700; color: var(--coral); margin-bottom: 4px; }
+
+  .chart-bar {
+    display: flex; align-items: center; gap: 10px; margin: 8px 0; font-size: 13px;
+  }
+  .chart-bar .label { width: 80px; text-align: right; font-weight: 600; color: var(--navy); }
+  .chart-bar .bar-wrap { flex: 1; background: var(--border); border-radius: 4px; height: 20px; overflow: hidden; }
+  .chart-bar .bar { height: 100%; background: linear-gradient(90deg, var(--navy), #3a4d75); border-radius: 4px; }
+  .chart-bar .val { width: 70px; text-align: left; font-weight: 600; }
+
+  .timeline { position: relative; padding-left: 24px; }
+  .timeline::before {
+    content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px;
+    width: 2px; background: var(--border);
+  }
+  .timeline .item { position: relative; margin-bottom: 18px; }
+  .timeline .item::before {
+    content: ""; position: absolute; left: -20px; top: 6px;
+    width: 10px; height: 10px; background: var(--coral); border-radius: 50%; border: 2px solid #fff;
+    box-shadow: 0 0 0 2px var(--coral);
+  }
+  .timeline .item h4 { font-size: 15px; color: var(--navy); margin-bottom: 4px; }
+  .timeline .item p { font-size: 13.5px; color: var(--text-light); margin: 0; }
+
+  .cta {
+    background: var(--navy); color: #fff; padding: 36px 0; text-align: center;
+  }
+  .cta h2 { color: #fff; justify-content: center; }
+  .cta p { opacity: 0.9; }
+  .btn {
+    display: inline-block; margin-top: 14px; padding: 12px 28px;
+    background: var(--coral); color: #fff; text-decoration: none; border-radius: 6px;
+    font-weight: 600; font-size: 15px;
+  }
+
+  .profile {
+    display: flex; gap: 24px; align-items: center; flex-wrap: wrap;
+    background: linear-gradient(135deg, #f7f9fc, #eef1f7);
+    padding: 28px; border-radius: 12px; margin-top: 20px;
+  }
+  .profile .avatar {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: var(--navy); color: #fff; display: flex; align-items: center; justify-content: center;
+    font-size: 28px; font-weight: 700; flex-shrink: 0;
+  }
+  .profile .info h3 { margin: 0 0 6px; font-size: 18px; }
+  .profile .info p { margin: 0; font-size: 13.5px; color: var(--text-light); }
+  .profile .tags { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+  .profile .tags span {
+    background: #fff; border: 1px solid var(--border); padding: 3px 10px; border-radius: 20px;
+    font-size: 12px; color: var(--navy);
+  }
+
+  .watermark { position: fixed; bottom: 12px; right: 16px; font-size: 12px; color: rgba(0,0,0,0.12); pointer-events: none; z-index: 1000; letter-spacing: 1px; }
+
+  @media (max-width: 720px) {
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    th, td { font-size: 12px; padding: 8px 6px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="watermark">Raven999HK</div>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="container">
+    <h1>🌟 袁小姐 專屬方案 — 寶寶教育金储蓄計劃</h1>
+    <p class="tagline">為 10 個月女寶策劃一份「安心、確定、有溫度」的海外教育金方案</p>
+    <div class="meta">
+      <span><span class="dot"></span> 投保人：袁小姐</span>
+      <span><span class="dot"></span> 受保人：女寶（0歲 / 10個月）</span>
+      <span><span class="dot"></span> 目標：大學教育金（約18歲起領取）</span>
+      <span><span class="dot"></span> 潛在保費期：5年</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- Section 1: 需求分析 -->
+<section>
+  <h2><span class="num">1</span>為什麼是這個時候？— 需求與理念</h2>
+  <p class="subtitle">教育是最好的遺產，也是每位父母想給孩子最穩的未來。我幫您整理了幾個核心考量：</p>
+  <div class="grid-3">
+    <div class="card">
+      <h4>🏦 確定性優先</h4>
+      <p>孩子的大學費用是「硬性支出」，不能賭。香港储蓄險的「保證金額+非保證紅利」雙層結構，能在確定時間點提供確定資金。</p>
+    </div>
+    <div class="card">
+      <h4>🌐 多幣配置</h4>
+      <p>海外留學不確定是美國、英國還是澳洲。多元貨幣功能讓未來可以根據實際留學地點轉換貨幣，減少汇率風險。</p>
+    </div>
+    <div class="card">
+      <h4>⏰ 時間復利</h4>
+      <p>孩子現在 10 個月，距離大學還有約 17-18 年。這段時間足夠長，讓復利效應充分發揮，即使每年存一筆小額資金，長期也能積累出可觀的教育基金。</p>
+    </div>
+  </div>
+  <div class="highlight-box">
+    <strong>您的情況總結：</strong>以目前常見方案而言，建議以 <strong>5年繳費期</strong> 為計劃，每年約 1萬美元（約 7.8萬港幣），總投入約 5萬美元。在孩子 18 歲時，預估可領取約 11-13 萬美元作為大學學費基金（實際數字因產品而異）。
+  </div>
+</section>
+
+<!-- Section 2: 保險公司背景實力 -->
+<section>
+  <h2><span class="num">2</span>六大保險公司背景實力對比</h2>
+  <p class="subtitle">選擇保險公司，首先看「能不能賠得起」。以下是各公司的核心指標：</p>
+  <div style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>保險公司</th>
+        <th>成立年份</th>
+        <th>總部所在地</th>
+        <th>資產管理規模</th>
+        <th>偿付能力</th>
+        <th>信用評級</th>
+        <th>香港市場特點</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>友邦 AIA</strong><br><span style="font-size:12px;color:#888">環宇盈活</span></td>
+        <td>1919年</td>
+        <td>香港（亞洲獨立）</td>
+        <td>>3,300億美元</td>
+        <td>恒生指數成份股</td>
+        <td><span class="badge badge-gold">AA-</span></td>
+        <td>香港最大壞階段人壽保險商之一，超過330萬客戶</td>
+      </tr>
+      <tr>
+        <td><strong>太保 CPIC</strong><br><span style="font-size:12px;color:#888">世代悅享3</span></td>
+        <td>2021年（香港）</td>
+        <td>中國上海</td>
+        <td>>2,000億美元（集團）</td>
+        <td>中國太保集團背書</td>
+        <td><span class="badge badge-navy">A</span></td>
+        <td>香港市場新進入者，但集團實力雄厚</td>
+      </tr>
+      <tr>
+        <td><strong>永明 Sun Life</strong><br><span style="font-size:12px;color:#888">萬年青星河河</span></td>
+        <td>1871年</td>
+        <td>加拿大</td>
+        <td>>1,400億美元</td>
+        <td>加拿大第二大保險公司</td>
+        <td><span class="badge badge-gold">AA</span></td>
+        <td>香港1892年起步，立足超過130年</td>
+      </tr>
+      <tr>
+        <td><strong>安盛 AXA</strong><br><span style="font-size:12px;color:#888">盛利II</span></td>
+        <td>1817年</td>
+        <td>法國</td>
+        <td>>1萬億美元</td>
+        <td>全球最大保險集團之一</td>
+        <td><span class="badge badge-gold">AA-</span></td>
+        <td>跨國金融巨頭，環球業務網絡廣泛</td>
+      </tr>
+      <tr>
+        <td><strong>宏利 Manulife</strong><br><span style="font-size:12px;color:#888">宏摯家傳承</span></td>
+        <td>1887年</td>
+        <td>加拿大</td>
+        <td>>8,000億美元</td>
+        <td>加拿大第一大，香港最大強積金供應商</td>
+        <td><span class="badge badge-gold">AA-</span></td>
+        <td>由加拿大首任總理創辦，137年歷史</td>
+      </tr>
+      <tr>
+        <td><strong>保誠 Prudential</strong><br><span style="font-size:12px;color:#888">信守明天</span></td>
+        <td>1848年</td>
+        <td>英國</td>
+        <td>>6,000億美元</td>
+        <td>偿付能力組239%</td>
+        <td><span class="badge badge-navy">A+</span></td>
+        <td>倫敦上市，超過170年歷史</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="font-size:13px;color:#888;margin-top:10px;">資料來源：各保險公司官方年報、標準普爾信用評級（S&P）。信用評級 AA 為「非常強」，A 為「強」。</p>
+</section>
+
+<!-- Section 3: 分紅實現率 -->
+<section>
+  <h2><span class="num">3</span>分紅實現率 — 過往表現說話</h2>
+  <p class="subtitle">「非保證金額」是可能變動的，但過往分紅實現率是判斷一家保險公司「說到做到」能力的重要指標：</p>
+  <div class="grid-2">
+    <div class="card">
+      <h4>📊 什麼是分紅實現率？</h4>
+      <p>保險公司每年會根據實際投資表現，決定給付多少「終期紅利」。<br><br>
+      <strong>實現率 = 實際發放紅利 / 計劃書預測紅利</strong><br><br>
+      例如：計劃書預測紅利 $1,000，實際發放 $950，則實現率為 95%。</p>
+    </div>
+    <div class="card">
+      <h4>🎯 理解一個關鍵信號</h4>
+      <p>實現率 <strong>越接近100%</strong>，代表保險公司的投資管理越穩定，客戶預期收益越有保障。<br><br>
+      若實現率長期低於 90%，說明該公司投資策略偏保守，或預測過於樂觀。</p>
+    </div>
+  </div>
+
+  <h3>各公司近年分紅實現率概泀（储蓄/分紅類保單）</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>保險公司</th>
+        <th>2020</th>
+        <th>2021</th>
+        <th>2022</th>
+        <th>2023</th>
+        <th>2024預估</th>
+        <th>近5年均值</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>友邦 AIA</strong></td>
+        <td>97%</td>
+        <td>98%</td>
+        <td>95%</td>
+        <td>96%</td>
+        <td><span class="badge badge-coral">96-100%</span></td>
+        <td><strong>96.4%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>太保 CPIC</strong></td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td><span class="badge badge-navy">新產品</span></td>
+        <td>無歷史數據</td>
+      </tr>
+      <tr>
+        <td><strong>永明 Sun Life</strong></td>
+        <td>99%</td>
+        <td>100%</td>
+        <td>97%</td>
+        <td>98%</td>
+        <td><span class="badge badge-coral">97-100%</span></td>
+        <td><strong>98.4%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>安盛 AXA</strong></td>
+        <td>96%</td>
+        <td>98%</td>
+        <td>94%</td>
+        <td>97%</td>
+        <td><span class="badge badge-coral">96-101%</span></td>
+        <td><strong>96.8%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>宏利 Manulife</strong></td>
+        <td>98%</td>
+        <td>99%</td>
+        <td>96%</td>
+        <td>97%</td>
+        <td><span class="badge badge-coral">97-99%</span></td>
+        <td><strong>97.4%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>保誠 Prudential</strong></td>
+        <td>95%</td>
+        <td>96%</td>
+        <td>92%</td>
+        <td>94%</td>
+        <td><span class="badge badge-coral">93-97%</span></td>
+        <td><strong>94.2%</strong></td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px;color:#888;margin-top:10px;">備註：分紅實現率數據來源於各保險公司官方公布的「分紅實現率總結」。2024為行業預估。太保為香港市場新進入者，目前無歷史储蓄險分紅數據。</p>
+</section>
+
+<!-- Section 4: 現金價值演示 -->
+<section>
+  <h2><span class="num">4</span>現金價值演示 — 孩子大學時能領多少？</h2>
+  <p class="subtitle">以每年繳費約 1萬美元、5年繳費為例，各產品在孩子不同年龄時的預估退保總金額（保證+非保證）：</p>
+
+  <h3>📌 關鍵時間點對比</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>年齡 / 年度</th>
+        <th>友邦<br>環宇盈活</th>
+        <th>太保<br>世代悅享3</th>
+        <th>永明<br>萬年青星河河</th>
+        <th>安盛<br>盛利II</th>
+        <th>宏利<br>宏摯家傳承</th>
+        <th>保誠<br>信守明天</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background:#f0f4ff">
+        <td><strong>5歲（繳費期滿）</strong></td>
+        <td>$23,276</td>
+        <td>$32,531</td>
+        <td>$15,580</td>
+        <td>$36,642</td>
+        <td>$24,909</td>
+        <td>$25,660</td>
+      </tr>
+      <tr style="background:#fff8f0">
+        <td><strong>12歲（小學畢業）</strong></td>
+        <td>$74,837</td>
+        <td>$75,576</td>
+        <td>$67,253</td>
+        <td>$76,153</td>
+        <td>$78,440</td>
+        <td>$74,097</td>
+      </tr>
+      <tr style="background:#f0fff4">
+        <td><strong>18歲（大學入學）</strong></td>
+        <td>$115,744</td>
+        <td>$119,917</td>
+        <td>$114,364</td>
+        <td>$114,808</td>
+        <td>$123,123</td>
+        <td>$117,334</td>
+      </tr>
+      <tr style="background:#f0fff4">
+        <td><strong>22歲（大學畢業）</strong></td>
+        <td>$134,120</td>
+        <td>$143,811</td>
+        <td>$136,484</td>
+        <td>$138,797</td>
+        <td>$138,627</td>
+        <td>$138,567</td>
+      </tr>
+      <tr>
+        <td><strong>30歲（繼續滾存）</strong></td>
+        <td>$292,739</td>
+        <td>$292,738</td>
+        <td>$278,406</td>
+        <td>$292,560</td>
+        <td>$292,738</td>
+        <td>$292,642</td>
+      </tr>
+      <tr>
+        <td><strong>65歲（退休年齡）</strong></td>
+        <td>$2,652,876</td>
+        <td>$2,652,855</td>
+        <td>$2,652,871</td>
+        <td>$2,650,102</td>
+        <td>$2,652,871</td>
+        <td>$2,652,511</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px;color:#888;margin-top:10px;">說明：1）以上為預估退保總金額（保證金額+非保證紅利），單位為美元。<br>
+2）非保證部分會隨市場波動變化，上表數字基於中等以上投資報酬假設（約年化 5-7%）。<br>
+3）若孩子 18-22 歲間分批領取大學費用，可按需提取，剩餘資金繼續滾存增值。</p>
+
+  <h3>📈 18歲大學入學金額對比</h3>
+  <div class="chart-bar">
+    <div class="label">友邦</div>
+    <div class="bar-wrap"><div class="bar" style="width:88%"></div></div>
+    <div class="val">$115,744</div>
+  </div>
+  <div class="chart-bar">
+    <div class="label">太保</div>
+    <div class="bar-wrap"><div class="bar" style="width:91%"></div></div>
+    <div class="val">$119,917</div>
+  </div>
+  <div class="chart-bar">
+    <div class="label">永明</div>
+    <div class="bar-wrap"><div class="bar" style="width:87%"></div></div>
+    <div class="val">$114,364</div>
+  </div>
+  <div class="chart-bar">
+    <div class="label">安盛</div>
+    <div class="bar-wrap"><div class="bar" style="width:87%"></div></div>
+    <div class="val">$114,808</div>
+  </div>
+  <div class="chart-bar">
+    <div class="label">宏利</div>
+    <div class="bar-wrap"><div class="bar" style="width:93%;background:linear-gradient(90deg,var(--coral),#f07a6e)"></div></div>
+    <div class="val" style="color:var(--coral)">$123,123 ⭐</div>
+  </div>
+  <div class="chart-bar">
+    <div class="label">保誠</div>
+    <div class="bar-wrap"><div class="bar" style="width:89%"></div></div>
+    <div class="val">$117,334</div>
+  </div>
+
+  <div class="highlight-box">
+    <strong>宏利、太保、保誠</strong> 在孩子 18 歲時的預估退保價值相對較高。但請注意：<br>
+    1）這是「預測值」，非保證紅利部分會隨市場波動；<br>
+    2）<strong>保證金額</strong>才是合約寫明一定會給付的部分，非保證紅利則視保險公司投資表現。
+  </div>
+
+  <h3>🎁 當前保費優惠一覽</h3>
+  <table>
+    <thead>
+      <tr><th>保險公司</th><th>優惠類型</th><th>優惠比例</th><th>約等於年繳保費折扣</th><th>備註</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>友邦</td><td>第二年保費回贈</td><td>12%</td><td>第二年實繳 $8,800</td><td>累計優惠約 $1,200</td></tr>
+      <tr><td>太保</td><td>首年保費折扣</td><td>10%</td><td>首年實繳 $9,000</td><td>累計優惠約 $1,000</td></tr>
+      <tr><td>永明</td><td>第二年保費回贈</td><td>12%</td><td>第二年實繳 $8,800</td><td>累計優惠約 $1,200，預繳可採利息折現</td></tr>
+      <tr><td>安盛</td><td>第二年保費回贈</td><td>10%</td><td>第二年實繳 $9,000</td><td>累計優惠約 $1,000，指定醫療/危疾+3%</td></tr>
+      <tr><td>宏利</td><td>首年保費折扣</td><td>8%</td><td>首年實繳 $9,200</td><td>累計優惠約 $800</td></tr>
+      <tr><td>保誠</td><td>第二年保費回贈</td><td>4%</td><td>第二年實繳 $9,600</td><td>累計優惠約 $400，配合啟業未來+2%</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Section 5: 產品功能性 -->
+<section>
+  <h2><span class="num">5</span>產品功能性 — 從您還沒想到的地方幫您考慮</h2>
+  <p class="subtitle">袁小姐，這些功能您可能還沒聽過，但對於孩子的長遠規劃非常重要：</p>
+
+  <div class="grid-2">
+    <div class="card">
+      <h4>🔄 多幣種轉換</h4>
+      <p>各產品支持的貨幣種類不同：<br><br>
+      <strong>友邦：</strong>9種（美元、港幣、人民幣、英鎊、歐元、加幣、新幣、澳幣、澳門幣）<br>
+      <strong>安盛：</strong>8種<br>
+      <strong>宏利：</strong>7種<br>
+      <strong>永明、保誠、太保：</strong>6種<br><br>
+      <span style="color:var(--coral)">【您的情況】</span>孩子未來留學國家未定，建議選擇貨幣選擇較多的產品，方便日後轉換。</p>
+    </div>
+    <div class="card">
+      <h4>📜 保單拆分</h4>
+      <p>當孩子長大後，您可以把一份保單拆成兩份：<br><br>
+      一份給孩子做教育金，一份留給孫子做遺產。<br><br>
+      <strong>友邦：</strong>繳費滿後可拆分<br>
+      <strong>永明、安盛：</strong>第3個保單週年日起可拆分<br>
+      <strong>宏利、保誠：</strong>第5個保單週年日起可拆分</p>
+    </div>
+    <div class="card">
+      <h4>👥 更改受保人</h4>
+      <p>所有六家公司都支持「無限次更改受保人」，通常在第1個保單年度後即可申請。<br><br>
+      這意味著：這份保單可以傳給孫子、孫女，世代相傳，變成一份「傳家寶」。</p>
+    </div>
+    <div class="card">
+      <h4>🔒 紅利鎖定</h4>
+      <p>當市場表現好時，可以把已累積的非保證紅利「鎖定」變成保證金額，避免未來市場下跌時撤回。<br><br>
+      <strong>永明：</strong>第10個週年起，最高50%<br>
+      <strong>安盛、保誠：</strong>第10個週年起，10%-50%<br>
+      <strong>友邦、太保、宏利：</strong>第15個週年起</p>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <strong>您可以思考的幾個問題：</strong><br>
+    1. 孩子未來更傾向去哪個國家留學？（美國？英國？澳洲？）這會影響我建議的貨幣選擇。<br>
+    2. 您是否有計劃再要孩子？若有，保單拆分功能可以幫助平衡兩個孩子的資產分配。<br>
+    3. 您家族是否有長期遺產規劃的考量？這份保單可以世代相傳，是一個很好的開始。
+  </div>
+</section>
+
+<!-- Section 6: 教育金理念 -->
+<section>
+  <h2><span class="num">6</span>教育金配置理念 — 為什麼不只是存錢？</h2>
+  <p class="subtitle">很多家長會問：我放定期存款不行嗎？或者買內地保險不行嗎？</p>
+
+  <div class="grid-3">
+    <div class="card">
+      <div class="score">VS</div>
+      <h4>定期存款</h4>
+      <p>利率持續下行，香港定期存款利率已降至1-2%。且定期存款無法滾存到孩子 18 歲後的長期增值，更無法做跨幣種配置。</p>
+    </div>
+    <div class="card">
+      <div class="score" style="color:var(--navy)">VS</div>
+      <h4>內地储蓄險</h4>
+      <p>收益率固定但較低（3%左右），且不支持外幣。若孩子未來去海外留學，內地保單無法直接支付美元/英鎊學費。</p>
+    </div>
+    <div class="card">
+      <div class="score" style="color:var(--gold)">✅</div>
+      <h4>香港储蓄險</h4>
+      <p>長期復利增值（預估 IRR 5-7%），多幣種選擇，可世代傳承，保證金額+紅利雙層結構。對於海外教育金來說是最適配。</p>
+    </div>
+  </div>
+
+  <h3>💡 為什麼要提早規劃？</h3>
+  <div class="timeline">
+    <div class="item">
+      <h4>0-5歲 — 累積期</h4>
+      <p>這個階段是「投入」期，每年存入一筆，利息開始滾雪球。孩子越小，時間越長，復利效果越明顯。</p>
+    </div>
+    <div class="item">
+      <h4>6-17歲 — 成長期</h4>
+      <p>保單已繳費完成，不需再投入任何資金，讓它自然滾存增值。這段時間保險公司的投資組合會幫您賺取紅利。</p>
+    </div>
+    <div class="item">
+      <h4>18-22歲 — 提取期</h4>
+      <p>孩子上大學，可分批提取部分資金支付學費、生活費。剩餘資金繼續滾存，作為孩子畢業後的「第一桶金」。</p>
+    </div>
+    <div class="item">
+      <h4>30歲以後 — 遺產期（可選）</h4>
+      <p>若大學期間提取後仍有剩餘，資金可繼續滾存增值。到孩子 30歲時，可能已累積到近30萬美元以上，作為結婚、創業或購房基金。</p>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <strong>重點提醒：</strong>定期存款是「單利」，香港储蓄險是「復利+非保證增值」。從長期來看，復利的差距會越拉越大。以 30 年為期，同樣的本金，香港储蓄險的預估累計回報通常是定期存款的 <strong>2-3倍</strong>。
+  </div>
+</section>
+
+<!-- Section 7: 績合建議 -->
+<section>
+  <h2><span class="num">7</span>績合建議 — 哪款更適合您？</h2>
+  <p class="subtitle">沒有「最好」的產品，只有「最適合您」的產品。我幫您做了一個快速對照：</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>您的需求</th>
+        <th>推薦產品</th>
+        <th>理由</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>看重背景實力與歷史穩定性</strong></td>
+        <td>宏利、友邦、安盛</td>
+        <td>宏利香港強積金第一，友邦亞洲最大，安盛跨國金融集團</td>
+      </tr>
+      <tr>
+        <td><strong>看重18歲時預估價值最高</strong></td>
+        <td>宏利、太保</td>
+        <td>宏利在18歲時預估約 $123,123，太保約 $119,917</td>
+      </tr>
+      <tr>
+        <td><strong>看重分紅實現率穩定</strong></td>
+        <td>永明、宏利</td>
+        <td>近年分紅實現率均在 97-100% 之間，表現穩健</td>
+      </tr>
+      <tr>
+        <td><strong>看重多幣種選擇</strong></td>
+        <td>友邦（9種）、安盛（8種）</td>
+        <td>未來留學國家未定，貨幣選擇多更有彈性</td>
+      </tr>
+      <tr>
+        <td><strong>看重保單功能靈活性</strong></td>
+        <td>永明、安盛</td>
+        <td>紅利鎖定開放較早（第10週年），保單拆分也較早可用</td>
+      </tr>
+      <tr>
+        <td><strong>看重首年保費優惠大</strong></td>
+        <td>友邦、永明、太保</td>
+        <td>首年/第二年回贈可達 10-12%</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="highlight-box">
+    <strong>我的個人偏好建議：</strong><br>
+    若您希望<strong>平衡收益、品牌、功能</strong>，我會推薦 <strong>宏利宏摯家傳承</strong> 或 <strong>友邦環宇盈活</strong>；<br>
+    若您希望<strong>收益率優先</strong>且願意承擔新公司的不確定性，<strong>太保世代悅享3</strong> 的短期預估較高。<br><br>
+    當然，這只是基於數據的初步建議。最終選擇還是要結合您對於保險公司品牌、服務、以及未來資金使用計劃的綜合考量。
+  </div>
+</section>
+
+<!-- Section 8: 個人名片 -->
+<section>
+  <div class="profile">
+    <div class="avatar">瑞</div>
+    <div class="info">
+      <h3>瑞雯 · Raven</h3>
+      <p>香港獨立保險經紀人 | 高端客戶財富管理顧問</p>
+      <p style="margin-top:6px;">曾於兩年內幫助超過 50 組家庭完成海外保險配置，累計管理保單資金超過 2,000 萬港幣。<br>
+      專注於教育金規劃、家族資產隔離與多幣種財富傳承方案。</p>
+      <div class="tags">
+        <span>香港保險</span>
+        <span>海外教育金</span>
+        <span>家族財富傳承</span>
+        <span>多幣種配置</span>
+        <span>WeChat: Raven999HK</span>
+      </div>
+    </div>
+  </div>
+  <p style="text-align:center;margin-top:20px;color:#888;font-size:13px;">本方案僅供參考，最終保證金額、紅利及優惠以保險公司正式保單為準。<br>
+  方案製作日期：2025年5月 | Raven999HK</p>
+</section>
+
+</div>
+
+<script>
+  // Simple smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
